@@ -135,7 +135,7 @@ module Samlr
               xml.CanonicalizationMethod("Algorithm" => c14n_method)
               xml.SignatureMethod("Algorithm" => sign_method)
 
-              xml.Reference("URI" => "##{element['ID']}") do
+              xml.Reference("ID" => "##{element['ID']}") do
                 xml.Transforms do
                   xml.Transform("Algorithm" => env_signature)
                   xml.Transform("Algorithm" => c14n_method) do
